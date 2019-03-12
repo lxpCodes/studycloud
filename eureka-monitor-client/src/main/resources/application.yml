@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-monitor-client
+server:
+  port: 8767
+
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: EUREKA-FEIGN-CLIENT,EUREKA-RIBBON-CLIEN
+  ##clusterNameExpression: new String("default")
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
